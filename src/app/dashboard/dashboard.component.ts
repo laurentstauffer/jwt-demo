@@ -21,7 +21,7 @@ export class DashboardComponent implements OnInit {
 
   loadData() {
     this.http
-      .get<string[]>('http://localhost:8080/auth/data')
+      .get<string[]>('/auth/data')
       .subscribe({
         next: res => {
           this.data = res;

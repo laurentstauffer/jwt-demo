@@ -27,7 +27,7 @@ export class LoginComponent {
 
   getHello() {
     this.http
-      .get('http://localhost:8080/auth/hello', { responseType: 'text' })
+      .get('/auth/hello', { responseType: 'text' })
       .subscribe({
         next: res => (this.message = res),
         error: () => (this.message = '🚫 Non autorisé — token manquant ou invalide'),
