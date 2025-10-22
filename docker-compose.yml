@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  backend:
+    build: ./jwt-demo-backend
+    container_name: jwt-demo-backend
+    ports:
+      - "8080:8080"
+    networks:
+      - jwt-demo-network
+
+  frontend:
+    build: ./jwt-demo-frontend
+    container_name: jwt-demo-frontend
+    ports:
+      - "4200:80"   # 80 interne → 4200 externe x
+    depends_on:
+      - backend
+    networks:
+      - jwt-demo-network
+
+networks:
+  jwt-demo-network:
+    driver: bridge
