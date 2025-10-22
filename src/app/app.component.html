@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>JWT Demo — Angular Routing</h2>
+
+  <!-- Barre de navigation visible uniquement si l'utilisateur est connecté -->
+  <nav *ngIf="auth.isLoggedIn()" style="margin-bottom: 16px;">
+    <a routerLink="/dashboard">🏠 Dashboard</a> |
+    <a (click)="logout()" style="cursor:pointer">🚪 Logout</a>
+  </nav>
+
+  <!-- Zone d'affichage des pages -->
+  <router-outlet></router-outlet>
+</div>
