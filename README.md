@@ -1,6 +1,7 @@
 # JWT Demo Application
 
 Application de démonstration utilisant JWT (JSON Web Tokens) avec un backend et un frontend containerisés.
+😁
 
 ## 📋 Prérequis
 
