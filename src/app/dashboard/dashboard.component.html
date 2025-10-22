@@ -1,0 +1,11 @@
+<div>
+  <h3>Dashboard</h3>
+  <p>{{ message }}</p>
+
+  <ul *ngIf="data.length > 0">
+    <li *ngFor="let item of data">{{ item }}</li>
+  </ul>
+
+  <button (click)="loadData()">🔄 Recharger</button>
+  <button (click)="logout()">🚪 Logout</button>
+</div>

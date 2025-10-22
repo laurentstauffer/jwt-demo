@@ -1,0 +1,13 @@
+<div>
+  <input [(ngModel)]="username" placeholder="username" />
+  <input [(ngModel)]="password" placeholder="password" type="password" />
+
+  <div>
+    <button (click)="login()">Login</button>
+    <button (click)="getHello()">Appeler API protégée</button>
+    <button (click)="logout()">Logout</button>
+  </div>
+
+  <p>{{ message }}</p>
+  <p><small>Test users : <strong>user/password</strong> ou <strong>admin/admin123</strong></small></p>
+</div>
